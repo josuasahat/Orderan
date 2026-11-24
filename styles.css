@@ -473,6 +473,19 @@ a.info-card:hover { transform: translate(-2px,-2px) rotate(-.6deg); box-shadow: 
 .seg input:focus-visible + span, .chips input:focus-visible + span { outline: 3px solid var(--orange); outline-offset: 2px; }
 .chips { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
 
+/* qris */
+.qris-card { margin: -2px 0 16px; padding: 14px; border-radius: 20px; background: var(--surface); border: 2.5px solid var(--brown-900); box-shadow: var(--hard); display: grid; gap: 12px; animation: slide-in .45s var(--ease) both; text-align: left; width: 100%; }
+.qris-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.qris-head > b { font-family: var(--display); font-weight: 400; font-size: 1.3rem; }
+.qris-head span { font-size: .85rem; color: var(--ink-2); }
+.qris-amt { font-family: var(--display); font-weight: 400; font-size: 1.3rem; color: var(--orange); margin-left: 4px; }
+.qris-img { display: block; background: #fff; border-radius: 14px; overflow: hidden; border: 2px solid var(--line); }
+.qris-img img { width: 100%; max-width: 340px; margin: 0 auto; }
+.qris-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: .8rem; color: var(--ink-2); }
+.qris-actions span { flex: 1; min-width: 160px; }
+.pay-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 14px; padding: 12px 16px; border-radius: var(--r); background: var(--surface-2); border: 2px dashed var(--line); font-weight: 700; }
+.pay-strip b { padding: 4px 12px; border-radius: 999px; background: var(--yellow); color: var(--brown-900); border: 2px solid var(--brown-900); font-size: .85rem; }
+
 /* done */
 .view-done { text-align: center; padding: 10px 0 20px; display: grid; justify-items: center; gap: 6px; }
 .done-art img { width: 150px; animation: jump 1s var(--ease) 2; }

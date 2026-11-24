@@ -298,6 +298,7 @@
     $("#bnTotal").textContent = count ? rp(total).replace("Rp", "") : "Keranjang";
     $("#drawerCount").textContent = count ? `(${count} boks)` : "";
     $("#subtotal").textContent = rp(total);
+    $("#qrisCheckout .qris-amt").textContent = rp(total);
     if (bump) { restart($("#cartCount"), "bump"); restart($("#bnCart"), "bump"); }
 
     const list = $("#cartList");
@@ -435,7 +436,15 @@
 
   form.addEventListener("change", (e) => {
     if (e.target.name === "cmethod") $("#roomField").hidden = F.cmethod.value !== "deliver";
+    if (e.target.name === "pay") syncQris();
   });
+  function syncQris() {
+    const box = $("#qrisCheckout");
+    const show = F.pay.value === "QRIS";
+    const wasHidden = box.hidden;
+    box.hidden = !show;
+    if (show && wasHidden) box.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "nearest" });
+  }
   form.addEventListener("input", (e) => e.target.closest(".field")?.classList.remove("invalid"));
   form.addEventListener("submit", (e) => { e.preventDefault(); submitOrder(); });
 
@@ -475,7 +484,7 @@
       `📅 *Tanggal:* ${o.dateLabel}`,
       `⏰ *Jam:* ${o.slot}`,
       `📍 *Metode:* ${method}`,
-      `💳 *Bayar:* ${o.pay}`,
+      `💳 *Bayar:* ${o.pay === "QRIS" ? `QRIS (${rp(o.total)}) — bukti bayar saya kirim di chat ini` : o.pay}`,
       ``,
       `*Pesanan:*`,
       ...lines,
@@ -516,6 +525,9 @@
     saveCart();
 
     $("#orderCode").textContent = order.code;
+    $("#qrisDone").hidden = order.pay !== "QRIS";
+    $(".done-art").hidden = order.pay === "QRIS";
+    $("#qrisDone .qris-amt").textContent = rp(order.total);
     $("#waAgain").href = lastWaUrl;
     renderCart();
     renderHistory();

@@ -1,8 +1,8 @@
 /* Tahu Walik service worker — offline-first app shell */
-const VERSION = "tw-v1";
+const VERSION = "tw-v2";
 const SHELL = [
   "./", "index.html", "styles.css", "app.js", "manifest.webmanifest",
-  "assets/img/box.webp", "assets/img/mascot.webp", "assets/img/logo.webp", "assets/img/flyer.jpg",
+  "assets/img/box.webp", "assets/img/mascot.webp", "assets/img/logo.webp", "assets/img/flyer.jpg", "assets/img/qris.jpg",
   "assets/icons/icon-192.png", "assets/icons/icon-512.png", "assets/icons/favicon.png",
 ];
 self.addEventListener("install", (e) => {

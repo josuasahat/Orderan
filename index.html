@@ -227,6 +227,10 @@
         </div>
       </div>
 
+      <div class="pay-strip reveal">
+        <span>💳 Bisa bayar pakai</span><b>Cash</b><b>QRIS</b><b>Transfer</b>
+      </div>
+
       <details class="flyer reveal">
         <summary>📰 Lihat flyer resmi</summary>
         <img src="assets/img/flyer.jpg" alt="Flyer Tahu Walik: harga 15.000, paket + air mineral 17.000, + teh pucuk 19.000, rasa Bojot, Balado, BBQ, Jagung Bakar" loading="lazy" width="900" height="1600" />
@@ -307,6 +311,16 @@
             <label><input type="radio" name="pay" value="Transfer" /><span>🏦 Transfer</span></label>
           </div>
         </div>
+        <div class="qris-card" id="qrisCheckout" hidden>
+          <div class="qris-head"><b>Scan QRIS</b><span>Total bayar <b class="qris-amt">Rp0</b></span></div>
+          <a href="assets/img/qris.jpg" target="_blank" rel="noopener" class="qris-img" aria-label="Buka QRIS ukuran penuh">
+            <img src="assets/img/qris.jpg" alt="QRIS Tahu Walik, NMID ID1026636489472" width="1000" height="1408" loading="lazy" />
+          </a>
+          <div class="qris-actions">
+            <a class="btn btn-primary btn-sm" href="assets/img/qris.jpg" download="QRIS-Tahu-Walik.jpg">⬇️ Simpan QRIS</a>
+            <span>Bayar pas sesuai total, lalu kirim <b>screenshot bukti bayar</b> di chat WA ya.</span>
+          </div>
+        </div>
 
         <label class="field">
           <span>Catatan <small>(opsional)</small></span>
@@ -321,6 +335,16 @@
         <h3>Pesanan siap dikirim! 🎉</h3>
         <p>Kode pesanan kamu</p>
         <div class="order-code" id="orderCode">TW-0000</div>
+        <div class="qris-card" id="qrisDone" hidden>
+          <div class="qris-head"><b>Scan QRIS</b><span>Total bayar <b class="qris-amt">Rp0</b></span></div>
+          <a href="assets/img/qris.jpg" target="_blank" rel="noopener" class="qris-img" aria-label="Buka QRIS ukuran penuh">
+            <img src="assets/img/qris.jpg" alt="QRIS Tahu Walik, NMID ID1026636489472" width="1000" height="1408" loading="lazy" />
+          </a>
+          <div class="qris-actions">
+            <a class="btn btn-primary btn-sm" href="assets/img/qris.jpg" download="QRIS-Tahu-Walik.jpg">⬇️ Simpan QRIS</a>
+            <span>Bayar pas sesuai total, lalu kirim <b>screenshot bukti bayar</b> di chat WA ya.</span>
+          </div>
+        </div>
         <p class="muted">WhatsApp sudah dibuka dengan detail pesanan. Tinggal tekan <b>kirim</b> ya! Kalau belum kebuka, tap tombol di bawah.</p>
         <a class="btn btn-wa btn-lg" id="waAgain" target="_blank" rel="noopener">Buka WhatsApp</a>
         <button class="btn btn-ghost" id="doneClose">Selesai</button>
