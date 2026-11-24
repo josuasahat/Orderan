@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Tahu Walik — Pesan Sekarang</title>
+  <meta name="description" content="Pesan Tahu Walik isi bakso + Basreng + Otak-otak. Rasa Bojot, Balado, BBQ, Jagung Bakar. Rp15.000/boks. Ready setiap hari Kamis di Telkom University Jakarta." />
+  <meta name="theme-color" content="#8f3412" />
+  <meta property="og:title" content="Tahu Walik — Satu boks, tiga kenikmatan!" />
+  <meta property="og:description" content="Tahu Walik isi bakso + Basreng + Otak-otak. Mulai Rp15.000. Ready tiap Kamis." />
+  <meta property="og:image" content="assets/img/og.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Tahu Walik" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#order">Langsung ke pemesanan</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#home" aria-label="Tahu Walik beranda">
+      <img src="assets/img/mascot.webp" alt="" width="40" height="43" />
+      <span>Tahu<b>Walik</b></span>
+    </a>
+    <nav class="topnav" aria-label="Navigasi utama">
+      <a href="#home" data-nav="home">Beranda</a>
+      <a href="#order" data-nav="order">Pesan</a>
+      <a href="#history" data-nav="history">Riwayat</a>
+      <a href="#info" data-nav="info">Info</a>
+    </nav>
+    <div class="top-actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Ganti tema terang/gelap" title="Tema">
+        <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+      <button class="cart-btn" id="cartBtn" aria-label="Buka keranjang">
+        <svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20.5" r="1.3"/><circle cx="17" cy="20.5" r="1.3"/></svg>
+        <span class="cart-label">Keranjang</span>
+        <span class="badge" id="cartCount" aria-live="polite">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+        <div class="sprinkles" id="sprinkles"></div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> Street Food Snacks · Kampus Minangkabau</p>
+        <h1 class="mega" aria-label="Tahu Walik">
+          <span class="mega-line">TAHU</span>
+          <span class="mega-line alt">WALIK</span>
+        </h1>
+        <p class="lead">Gurih renyah Tahu Walik <b>isi bakso padat</b>, lengkap bareng <b>Basreng</b> &amp; <b>Otak-otak</b>. Satu boks, tiga kenikmatan — cocok buat nemenin kuliah! 😋</p>
+
+        <div class="countdown" id="countdown" role="timer" aria-live="off">
+          <div class="cd-label"><span class="pulse"></span><span id="cdTitle">Ready hari Kamis</span></div>
+          <div class="cd-boxes">
+            <div><b id="cdD">0</b><small>hari</small></div>
+            <div><b id="cdH">00</b><small>jam</small></div>
+            <div><b id="cdM">00</b><small>menit</small></div>
+            <div><b id="cdS">00</b><small>detik</small></div>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#order" class="btn btn-primary btn-lg magnetic">
+            Pesan Sekarang
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <button class="btn btn-ghost btn-lg" id="spinOpen">🎰 Bingung rasa? Putar!</button>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="price-stamp" aria-label="Harga 15 ribu">
+          <svg viewBox="0 0 200 200" class="stamp-ring" aria-hidden="true">
+            <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+            <text><textPath href="#circ">• RENYAH • GURIH • NAMPOL • MURAH • RENYAH • GURIH • NAMPOL </textPath></text>
+          </svg>
+          <div class="stamp-core"><small>cuma</small><b>15K</b><small>/boks</small></div>
+        </div>
+        <div class="box-wrap tilt" id="heroBox">
+          <img src="assets/img/box.webp" alt="Satu boks Tahu Walik, Basreng dan Otak-otak dengan tusuk sate" width="900" height="1124" fetchpriority="high" />
+          <span class="steam s1"></span><span class="steam s2"></span><span class="steam s3"></span>
+        </div>
+        <button class="mascot" id="mascot" aria-label="Sapa maskot Tahu Walik">
+          <img src="assets/img/mascot.webp" alt="" width="486" height="522" />
+          <span class="bubble" id="bubble">Haii! Laper ya? 🤤</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>BOJOT 🌶️</span><span>BALADO 🔥</span><span>BBQ 🍖</span><span>JAGUNG BAKAR 🌽</span><span>READY KAMIS 📅</span><span>RP15.000 💸</span>
+        <span>BOJOT 🌶️</span><span>BALADO 🔥</span><span>BBQ 🍖</span><span>JAGUNG BAKAR 🌽</span><span>READY KAMIS 📅</span><span>RP15.000 💸</span>
+      </div>
+    </div>
+
+    <!-- ============ TRIO ============ -->
+    <section class="section trio" aria-labelledby="trioTitle">
+      <h2 class="section-title" id="trioTitle"><span>Satu Boks,</span> Tiga Kenikmatan</h2>
+      <div class="trio-grid">
+        <article class="trio-card reveal" style="--d:0">
+          <div class="trio-ico">🥟</div>
+          <h3>Tahu Walik</h3>
+          <p>Tahu dibalik, kulitnya jadi dalem — diisi adonan bakso padat, digoreng sampai kriuk.</p>
+        </article>
+        <article class="trio-card reveal" style="--d:1">
+          <div class="trio-ico">🐟</div>
+          <h3>Basreng</h3>
+          <p>Bakso goreng diiris tipis, renyah di luar, kenyal di dalam. Nagih parah.</p>
+        </article>
+        <article class="trio-card reveal" style="--d:2">
+          <div class="trio-ico">🍢</div>
+          <h3>Otak-otak</h3>
+          <p>Lembut gurih ikan, dipanggang sampai wangi. Pelengkap yang bikin boks makin full.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ ORDER BUILDER ============ -->
+    <section class="section order" id="order" aria-labelledby="orderTitle">
+      <h2 class="section-title" id="orderTitle"><span>Racik</span> Pesananmu</h2>
+      <p class="section-sub">Pilih rasa, pilih paket, atur jumlah. Mau campur rasa? Tambahin aja satu-satu ke keranjang!</p>
+
+      <div class="builder">
+        <div class="builder-preview" id="preview" aria-live="polite">
+          <div class="preview-stage">
+            <div class="preview-glow"></div>
+            <img src="assets/img/box.webp" alt="" class="preview-img" id="previewImg" width="900" height="1124" />
+            <div class="seasoning" id="seasoning" aria-hidden="true"></div>
+            <div class="preview-tag" id="previewTag">
+              <span class="pt-emoji" id="ptEmoji">🌶️</span>
+              <span class="pt-name" id="ptName">Bojot</span>
+            </div>
+            <div class="preview-extra" id="previewExtra" hidden>
+              <span id="peEmoji">💧</span>
+            </div>
+          </div>
+          <div class="spice">
+            <span>Level pedas</span>
+            <div class="spice-meter" id="spiceMeter" aria-label="Level pedas"><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+
+        <div class="builder-form">
+          <fieldset class="step">
+            <legend><span class="step-n">1</span> Pilih rasa</legend>
+            <div class="flavors" id="flavors" role="radiogroup" aria-label="Pilihan rasa"></div>
+          </fieldset>
+
+          <fieldset class="step">
+            <legend><span class="step-n">2</span> Pilih paket</legend>
+            <div class="packs" id="packs" role="radiogroup" aria-label="Pilihan paket"></div>
+          </fieldset>
+
+          <fieldset class="step step-row">
+            <legend><span class="step-n">3</span> Jumlah boks</legend>
+            <div class="qty" id="qtyBox">
+              <button type="button" class="qty-btn" data-q="-1" aria-label="Kurangi">−</button>
+              <output id="qty" aria-live="polite">1</output>
+              <button type="button" class="qty-btn" data-q="1" aria-label="Tambah">+</button>
+            </div>
+          </fieldset>
+
+          <div class="add-row">
+            <div class="line-total">
+              <small>Total</small>
+              <b id="lineTotal">Rp15.000</b>
+            </div>
+            <button class="btn btn-primary btn-lg add-btn" id="addBtn">
+              <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+              Tambah ke Keranjang
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HISTORY ============ -->
+    <section class="section history" id="history" aria-labelledby="histTitle">
+      <h2 class="section-title" id="histTitle"><span>Riwayat</span> Pesanan</h2>
+      <p class="section-sub">Tersimpan di perangkat ini aja. Tinggal tap “Pesan lagi” buat order yang sama.</p>
+      <div class="history-list" id="historyList"></div>
+    </section>
+
+    <!-- ============ INFO ============ -->
+    <section class="section info" id="info" aria-labelledby="infoTitle">
+      <h2 class="section-title" id="infoTitle"><span>Cara</span> Pesan</h2>
+      <ol class="how">
+        <li class="reveal" style="--d:0"><b>1</b><div><h3>Racik</h3><p>Pilih rasa &amp; paket, masukin keranjang.</p></div></li>
+        <li class="reveal" style="--d:1"><b>2</b><div><h3>Checkout</h3><p>Isi nama, jam ambil &amp; cara bayar.</p></div></li>
+        <li class="reveal" style="--d:2"><b>3</b><div><h3>Kirim WA</h3><p>Pesanan otomatis kekirim ke WhatsApp Anarta.</p></div></li>
+        <li class="reveal" style="--d:3"><b>4</b><div><h3>Ambil Kamis</h3><p>Ambil di kampus atau diantar ke kelas. Nyam!</p></div></li>
+      </ol>
+
+      <div class="info-grid">
+        <a class="info-card reveal" href="https://wa.me/6281282397512" target="_blank" rel="noopener">
+          <span class="ic ic-wa"><svg viewBox="0 0 24 24"><path d="M20.5 3.5A11 11 0 0 0 3.3 17.1L2 22l5-1.3A11 11 0 0 0 20.5 3.5ZM12 20a8.9 8.9 0 0 1-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A9 9 0 1 1 12 20Zm4.9-6.7c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.3 7.3 0 0 1-3.6-3.2c-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5l-.8-2c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3Z"/></svg></span>
+          <div><small>CP / WhatsApp</small><b>Anarta · 0812-8239-7512</b></div>
+        </a>
+        <a class="info-card reveal" href="https://instagram.com/tahuwaliku" target="_blank" rel="noopener">
+          <span class="ic ic-ig"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="fill"/></svg></span>
+          <div><small>Instagram</small><b>@tahuwaliku</b></div>
+        </a>
+        <div class="info-card reveal">
+          <span class="ic ic-pin"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div><small>Lokasi</small><b>Telkom University Jakarta<br />Kampus Minangkabau (C)</b></div>
+        </div>
+        <div class="info-card reveal">
+          <span class="ic ic-cal"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+          <div><small>Jadwal</small><b>Ready setiap hari Kamis</b></div>
+        </div>
+      </div>
+
+      <details class="flyer reveal">
+        <summary>📰 Lihat flyer resmi</summary>
+        <img src="assets/img/flyer.jpg" alt="Flyer Tahu Walik: harga 15.000, paket + air mineral 17.000, + teh pucuk 19.000, rasa Bojot, Balado, BBQ, Jagung Bakar" loading="lazy" width="900" height="1600" />
+      </details>
+    </section>
+
+    <footer class="footer">
+      <img src="assets/img/logo.webp" alt="Logo Tahu Walik Street Food Snacks" width="320" height="285" loading="lazy" />
+      <p>Dibuat dengan 🧡 &amp; minyak panas. © <span id="year"></span> Tahu Walik · @tahuwaliku</p>
+      <button class="btn btn-ghost btn-sm" id="installBtn" hidden>📲 Pasang Aplikasi</button>
+    </footer>
+  </main>
+
+  <!-- ============ MOBILE BOTTOM NAV ============ -->
+  <nav class="bottomnav" aria-label="Navigasi bawah">
+    <a href="#home" data-nav="home"><svg viewBox="0 0 24 24"><path d="M3 11 12 3l9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg><span>Beranda</span></a>
+    <a href="#order" data-nav="order"><svg viewBox="0 0 24 24"><path d="M4 7h16l-1.5 12.5a2 2 0 0 1-2 1.5h-9a2 2 0 0 1-2-1.5Z"/><path d="M8 7a4 4 0 0 1 8 0"/></svg><span>Pesan</span></a>
+    <button class="bn-cart" id="bnCart" aria-label="Keranjang"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20.5" r="1.3"/><circle cx="17" cy="20.5" r="1.3"/></svg><b id="bnTotal">Rp0</b><span class="badge" id="bnCount">0</span></button>
+    <a href="#history" data-nav="history"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Riwayat</span></a>
+    <a href="#info" data-nav="info"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span>Info</span></a>
+  </nav>
+
+  <!-- ============ CART DRAWER ============ -->
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Keranjang belanja" aria-hidden="true" tabindex="-1">
+    <div class="drawer-head">
+      <h2>Keranjang <span id="drawerCount"></span></h2>
+      <button class="icon-btn" id="closeDrawer" aria-label="Tutup keranjang"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+
+    <div class="drawer-body">
+      <div class="view view-cart" id="viewCart">
+        <ul class="cart-list" id="cartList"></ul>
+        <div class="empty" id="cartEmpty">
+          <img src="assets/img/mascot.webp" alt="" width="140" height="150" />
+          <p><b>Keranjang masih kosong</b><br />Tahu-nya nungguin kamu nih 🥺</p>
+          <a href="#order" class="btn btn-primary" data-close>Mulai Pesan</a>
+        </div>
+      </div>
+
+      <form class="view view-checkout" id="checkoutForm" hidden novalidate>
+        <button type="button" class="back-link" id="backToCart">← Kembali ke keranjang</button>
+
+        <label class="field">
+          <span>Nama kamu</span>
+          <input name="cname" autocomplete="name" required placeholder="cth. Rafi" />
+          <em class="err">Isi nama dulu ya</em>
+        </label>
+        <label class="field">
+          <span>No. WhatsApp</span>
+          <input name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="08xx-xxxx-xxxx" />
+          <em class="err">Nomor WA belum valid</em>
+        </label>
+
+        <div class="field">
+          <span>Mau diambil gimana?</span>
+          <div class="seg" role="radiogroup">
+            <label><input type="radio" name="cmethod" value="pickup" checked /><span>🏫 Ambil di kampus</span></label>
+            <label><input type="radio" name="cmethod" value="deliver" /><span>🛵 Antar ke kelas</span></label>
+          </div>
+        </div>
+        <label class="field" id="roomField" hidden>
+          <span>Ruang / lokasi antar</span>
+          <input name="room" placeholder="cth. Gedung C, Lt. 3, R. 305" />
+          <em class="err">Isi lokasi antarnya ya</em>
+        </label>
+
+        <div class="field">
+          <span>Jam ambil (Kamis)</span>
+          <div class="chips" id="slots" role="radiogroup"></div>
+        </div>
+
+        <div class="field">
+          <span>Pembayaran</span>
+          <div class="seg seg-3" role="radiogroup">
+            <label><input type="radio" name="pay" value="Cash" checked /><span>💵 Cash</span></label>
+            <label><input type="radio" name="pay" value="QRIS" /><span>📱 QRIS</span></label>
+            <label><input type="radio" name="pay" value="Transfer" /><span>🏦 Transfer</span></label>
+          </div>
+        </div>
+
+        <label class="field">
+          <span>Catatan <small>(opsional)</small></span>
+          <textarea name="note" rows="2" placeholder="cth. bumbunya dipisah ya kak"></textarea>
+        </label>
+      </form>
+
+      <div class="view view-done" id="viewDone" hidden>
+        <div class="done-art">
+          <img src="assets/img/mascot.webp" alt="" width="180" height="193" />
+        </div>
+        <h3>Pesanan siap dikirim! 🎉</h3>
+        <p>Kode pesanan kamu</p>
+        <div class="order-code" id="orderCode">TW-0000</div>
+        <p class="muted">WhatsApp sudah dibuka dengan detail pesanan. Tinggal tekan <b>kirim</b> ya! Kalau belum kebuka, tap tombol di bawah.</p>
+        <a class="btn btn-wa btn-lg" id="waAgain" target="_blank" rel="noopener">Buka WhatsApp</a>
+        <button class="btn btn-ghost" id="doneClose">Selesai</button>
+      </div>
+    </div>
+
+    <div class="drawer-foot" id="drawerFoot">
+      <div class="sum-row"><span>Subtotal</span><b id="subtotal">Rp0</b></div>
+      <div class="sum-hint" id="sumHint"></div>
+      <button class="btn btn-primary btn-lg btn-block" id="checkoutBtn">Lanjut Checkout</button>
+      <button class="btn btn-wa btn-lg btn-block" id="sendBtn" hidden>
+        <svg viewBox="0 0 24 24"><path d="M20.5 3.5A11 11 0 0 0 3.3 17.1L2 22l5-1.3A11 11 0 0 0 20.5 3.5Z" /></svg>
+        Kirim Pesanan via WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============ SPIN MODAL ============ -->
+  <dialog class="spin-modal" id="spinModal" aria-labelledby="spinTitle">
+    <button class="icon-btn spin-x" id="spinClose" aria-label="Tutup"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h2 id="spinTitle">Roda Rasa 🎰</h2>
+    <p>Biar semesta yang milihin rasamu hari ini.</p>
+    <div class="wheel-wrap">
+      <div class="wheel-pointer" aria-hidden="true"></div>
+      <div class="wheel" id="wheel"></div>
+      <button class="wheel-hub" id="spinGo">PUTAR</button>
+    </div>
+    <p class="spin-result" id="spinResult" aria-live="polite">&nbsp;</p>
+    <button class="btn btn-primary" id="spinUse" hidden>Pakai rasa ini →</button>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
