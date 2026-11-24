@@ -9,6 +9,7 @@ Web app pemesanan **Tahu Walik** (isi bakso + Basreng + Otak-otak). Bisa dibuka 
 - 🎰 **Roda Rasa** buat yang bingung pilih
 - 🛒 Keranjang (mix rasa, ubah jumlah, hapus) — tersimpan otomatis
 - 📲 Checkout → pesanan otomatis terformat & dikirim ke **WhatsApp Anarta (0812-8239-7512)** + kode pesanan unik
+- 💳 Pembayaran **hanya via QRIS** (gambar QRIS + total bayar tampil di checkout & setelah pesan, bisa disimpan ke galeri). Ganti QRIS: timpa `assets/img/qris.jpg`.
 - 🧾 Riwayat pesanan + tombol **Pesan lagi**
 - 🌗 Mode gelap/terang, responsif (HP → desktop), aksesibel (keyboard, reduced-motion)
 - 📴 Bisa dipakai offline & dipasang ke layar utama

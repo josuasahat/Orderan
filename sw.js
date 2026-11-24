@@ -1,5 +1,5 @@
 /* Tahu Walik service worker — offline-first app shell */
-const VERSION = "tw-v2";
+const VERSION = "tw-v3";
 const SHELL = [
   "./", "index.html", "styles.css", "app.js", "manifest.webmanifest",
   "assets/img/box.webp", "assets/img/mascot.webp", "assets/img/logo.webp", "assets/img/flyer.jpg", "assets/img/qris.jpg",

@@ -474,6 +474,8 @@ a.info-card:hover { transform: translate(-2px,-2px) rotate(-.6deg); box-shadow: 
 .chips { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
 
 /* qris */
+.pay-only { margin: 0; padding: 10px 14px; border-radius: 14px; background: var(--yellow); color: var(--brown-900); border: 2.5px solid var(--brown-900); font-size: .85rem; font-weight: 600; }
+.ps-sub { flex-basis: 100%; font-size: .8rem; font-weight: 600; color: var(--ink-2); }
 .qris-card { margin: -2px 0 16px; padding: 14px; border-radius: 20px; background: var(--surface); border: 2.5px solid var(--brown-900); box-shadow: var(--hard); display: grid; gap: 12px; animation: slide-in .45s var(--ease) both; text-align: left; width: 100%; }
 .qris-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
 .qris-head > b { font-family: var(--display); font-weight: 400; font-size: 1.3rem; }
